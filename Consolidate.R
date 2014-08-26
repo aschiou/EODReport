@@ -1,4 +1,5 @@
 Consolidate<-function(filename=character()) {
+  require(xlsx)
   rpttype <- c('')
   rowIndex <- numeric(0)
   if (grepl(" Con ", filename)) {
@@ -10,7 +11,7 @@ Consolidate<-function(filename=character()) {
     rowIndex <- c(9,10,13,14,21,22,25,26)
   }
   else if (grepl(" Rad ", filename)) {
-    rpttype<-c("Lab")
+    rpttype<-c("Rad")
     rowIndex <- c(7,8,11,12)
   }
 
